@@ -1,21 +1,20 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
     return (
         <footer className="border-t border-white/5 bg-black py-12 px-6">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
                 <div>
-                    <Link href="/" className="flex items-center space-x-2">
-                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                            <span className="font-bold text-white text-xl">N</span>
-                        </div>
-                        <span className="text-2xl font-outfit font-bold tracking-tight text-white">
-                            Nexora
-                        </span>
+                    <Link href="/" className="flex items-center group">
+                        <Image src="/logo.png" alt="Nexora" width={140} height={140} className="object-contain" />
                     </Link>
                     <p className="mt-4 text-zinc-500 text-sm max-w-xs transition-colors hover:text-zinc-400 cursor-default">
                         Designing and building the future of digital experiences with cutting-edge technology.
+                    </p>
+                    <p className="mt-4 text-zinc-600 text-xs font-medium uppercase tracking-wider">
+                        Founder: Aditya Agrawal | Co-founder: Ronit Agrawal
                     </p>
                 </div>
 
