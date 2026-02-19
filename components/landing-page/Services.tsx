@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Smartphone, Layers, Monitor } from "lucide-react";
+import { Code, Smartphone, Layers, Monitor, Instagram } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeader } from "./SectionHeader";
 
@@ -30,6 +30,11 @@ export const Services = () => {
             title: "Cloud Performance",
             description: "Optimized infrastructure for lightning-fast delivery across the globe.",
             icon: <Monitor size={32} className="text-purple-400" />,
+        },
+        {
+            title: "Social Media Management",
+            description: "Strategic management of your social presence on Instagram, Facebook, and more to drive engagement and growth.",
+            icon: <Instagram size={32} className="text-pink-500" />,
             className: "col-span-1"
         }
     ];

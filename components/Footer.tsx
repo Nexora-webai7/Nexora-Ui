@@ -19,7 +19,7 @@ const Footer = () => {
                     </p>
                 </div>
 
-                <div className="flex space-x-12">
+                <div className="flex flex-wrap justify-center md:justify-start gap-12">
                     <div className="flex flex-col space-y-4">
                         <h4 className="text-white font-outfit font-semibold">Company</h4>
                         <Link href="#services" className="text-zinc-500 hover:text-white text-sm transition-colors">Services</Link>
@@ -28,8 +28,16 @@ const Footer = () => {
                     </div>
                     <div className="flex flex-col space-y-4">
                         <h4 className="text-white font-outfit font-semibold">Legal</h4>
-                        <Link href="#" className="text-zinc-500 hover:text-white text-sm transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="text-zinc-500 hover:text-white text-sm transition-colors">Terms of Service</Link>
+                        <Link href="/privacy" className="text-zinc-500 hover:text-white text-sm transition-colors">Privacy Policy</Link>
+                        <Link href="/terms" className="text-zinc-500 hover:text-white text-sm transition-colors">Terms of Service</Link>
+                    </div>
+                    <div className="flex flex-col space-y-4">
+                        <h4 className="text-white font-outfit font-semibold">Location</h4>
+                        <div className="text-zinc-500 text-sm leading-relaxed">
+                            <p>Bennett University</p>
+                            <p>Plot # 8-11, Techzone 2</p>
+                            <p>Greater Noida, UP 201310</p>
+                        </div>
                     </div>
                 </div>
 
