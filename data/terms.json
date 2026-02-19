@@ -1,0 +1,71 @@
+{
+  "title": "Digital Marketing Services Agreement",
+  "subtitle": "Terms & Conditions",
+  "description": "Terms & Conditions for Nexora digital marketing services",
+  "sections": [
+    {
+      "id": "service-provider",
+      "title": "1. Service Provider",
+      "content": "This service is provided by Ronit and Aditya (Digital Growth Partner), specializing in improving online presence, local visibility, and customer acquisition for local businesses through digital marketing strategies."
+    },
+    {
+      "id": "scope-services",
+      "title": "2. Scope of Services",
+      "items": [
+        "Google Business Profile Optimization",
+        "Review Management and Reputation Building",
+        "Social Media Management (Instagram, Facebook, etc.)",
+        "Local Targeted Ads (3–5 km radius)",
+        "Website or Landing Page Creation (if required)",
+        "Lead & Inquiry Optimization Strategies"
+      ]
+    },
+    {
+      "id": "nature-results",
+      "title": "3. Nature of Results",
+      "content": "We focus on increasing online visibility, inquiries, and customer reach. We do not guarantee fixed sales numbers or exact customer increase, as conversions depend on service quality, pricing, competition, and market demand. Results vary based on business niche and location."
+    },
+    {
+      "id": "client-responsibilities",
+      "title": "4. Client Responsibilities",
+      "items": [
+        "Provide accurate business information, images, and service details",
+        "Give required access to platforms (Google Business, Social Media, etc.)",
+        "Respond to customer inquiries and leads generated",
+        "Maintain quality service and customer experience",
+        "Provide timely approvals for content and campaigns"
+      ]
+    },
+    {
+      "id": "payment-terms",
+      "title": "5. Payment Terms",
+      "content": "Pricing is customized based on business goals, competition, and service scope. Payments are to be made in advance (monthly or as mutually agreed).",
+      "additionalContent": "Once the work has started, payments are non-refundable due to the time, tools, and strategic effort involved. Any additional services outside the agreed scope will be charged separately."
+    },
+    {
+      "id": "advertising-budget",
+      "title": "6. Advertising Budget Policy",
+      "content": "Ad budget for Google Ads, Meta Ads, or any paid promotions is separate from service fees. The client will either pay the platform directly or provide the budget in advance for transparent ad management."
+    },
+    {
+      "id": "service-duration",
+      "title": "7. Service Duration & Termination",
+      "content": "Recommended minimum service duration is 1–3 months for visible and sustainable results. Either party may terminate the service with a prior notice of 7–15 days."
+    },
+    {
+      "id": "ownership-assets",
+      "title": "8. Ownership of Accounts & Assets",
+      "content": "All business accounts including Google Business Profile, Social Media Accounts, and Websites remain the property of the client. We only manage and optimize them during the service period."
+    },
+    {
+      "id": "confidentiality",
+      "title": "9. Confidentiality Clause",
+      "content": "All business data, login credentials, and internal information shared by the client will be kept strictly confidential and will not be sold, shared, or disclosed to any third party without permission."
+    },
+    {
+      "id": "limitation-liability",
+      "title": "10. Limitation of Liability",
+      "content": "We are responsible for marketing strategy and digital visibility improvement only. We are not liable for business losses, sales fluctuations, customer behavior, platform algorithm changes, or external market factors."
+    }
+  ]
+}

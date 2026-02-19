@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const navLinks = [
     { name: "Services", href: "#services" },
@@ -28,29 +29,15 @@ const Navbar = () => {
     return (
         <nav
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
-                isScrolled ? "py-3" : "py-6"
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4"
             )}
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
-                {/* Glassmorphism Background Wrapper */}
-                <div
-                    className={cn(
-                        "absolute inset-0 -z-10 transition-all duration-300",
-                        isScrolled ? "opacity-100" : "opacity-0"
-                    )}
-                >
-                    <div className="absolute inset-0 bg-black/60 backdrop-blur-xl border-b border-white/10" />
-                </div>
+
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center space-x-2 group">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                        <span className="font-bold text-white text-xl">N</span>
-                    </div>
-                    <span className="text-2xl font-outfit font-bold tracking-tight text-white group-hover:text-blue-400 transition-colors">
-                        Nexora
-                    </span>
+                    <Image src="/logo.png" alt="Nexora" width={182} height={182} />
                 </Link>
 
                 {/* Desktop Navigation */}

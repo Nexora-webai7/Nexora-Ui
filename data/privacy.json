@@ -1,0 +1,46 @@
+{
+  "title": "Privacy Policy",
+  "description": "Privacy Policy for Nexora digital marketing services",
+  "sections": [
+    {
+      "id": "information-collection",
+      "title": "1. Information We Collect",
+      "content": "We may collect business details such as name, contact number, email, address, social media handles, and marketing-related performance data for service optimization."
+    },
+    {
+      "id": "information-usage",
+      "title": "2. How We Use the Information",
+      "content": "Collected information is used solely for improving online visibility, running local marketing campaigns, performance tracking, and business growth optimization."
+    },
+    {
+      "id": "data-protection",
+      "title": "3. Data Protection & Security",
+      "content": "We implement secure handling of login access, confidential storage of business data, and restricted access to authorized team members only."
+    },
+    {
+      "id": "third-party-platforms",
+      "title": "4. Third-Party Platforms",
+      "content": "We may use trusted platforms such as Google, Meta (Facebook & Instagram), analytics tools, and hosting providers. These platforms have their own privacy policies and data handling practices."
+    },
+    {
+      "id": "client-data-safety",
+      "title": "5. Client Data Safety",
+      "content": "Client login credentials and data will remain confidential. Ownership of all digital assets will always remain with the client, and access can be revoked anytime upon request."
+    },
+    {
+      "id": "consent-communication",
+      "title": "6. Consent & Communication",
+      "content": "By using our services, the client agrees to communication via WhatsApp, Email, or Phone for project updates, reports, and strategy discussions."
+    },
+    {
+      "id": "policy-updates",
+      "title": "7. Policy Updates",
+      "content": "We reserve the right to update this Terms & Conditions and Privacy Policy document for service improvements and legal compliance. Clients will be informed in case of major changes."
+    },
+    {
+      "id": "final-note",
+      "title": "Final Note",
+      "content": "Our goal is to build long-term trust and growth partnerships with local businesses rather than short-term gains. This document ensures transparency, professionalism, and mutual understanding between both parties."
+    }
+  ]
+}
