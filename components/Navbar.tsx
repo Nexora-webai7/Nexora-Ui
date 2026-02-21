@@ -10,7 +10,7 @@ import Image from "next/image";
 const navLinks = [
     { name: "Services", href: "#services" },
     { name: "Portfolio", href: "#portfolio" },
-    { name: "Process", href: "#process" },
+    // { name: "Process", href: "#process" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -29,7 +29,7 @@ const Navbar = () => {
     return (
         <nav
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4"
+                "absolute top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4"
             )}
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">

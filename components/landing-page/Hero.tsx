@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -33,13 +33,13 @@ export const Hero = () => {
                         with cutting-edge technology and visionary design.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <button className="px-8 py-4 rounded-full bg-white text-black font-bold hover:scale-105 transition-transform flex items-center group">
+                        <Link href="#contact" className="px-8 py-4 rounded-full bg-white text-black font-bold hover:scale-105 transition-transform flex items-center group">
                             Start Your Project
                             <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                        </button>
-                        <button className="px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-bold hover:bg-white/10 transition-colors">
+                        </Link>
+                        <Link href="#services" className="px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-bold hover:bg-white/10 transition-colors">
                             View Showcase
-                        </button>
+                        </Link>
                     </div>
                 </motion.div>
             </div>
