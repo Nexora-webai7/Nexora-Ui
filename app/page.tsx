@@ -7,6 +7,7 @@ import { Hero } from "@/components/landing-page/Hero";
 import { Services } from "@/components/landing-page/Services";
 // import { Portfolio } from "@/components/landing-page/Portfolio";
 import { Process } from "@/components/landing-page/Process";
+import { Pricing } from "@/components/landing-page/Pricing";
 import { Contact } from "@/components/landing-page/Contact";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Services />
       {/* <Portfolio /> */}
       <Process />
+      <Pricing />
       <Contact />
       <Footer />
     </main>
