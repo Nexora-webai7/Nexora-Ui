@@ -14,7 +14,7 @@ const Footer = () => {
                         Designing and building the future of digital experiences with cutting-edge technology.
                     </p>
                     <p className="mt-4 text-zinc-600 text-xs font-medium uppercase tracking-wider">
-                        Founder: Aditya Agrawal | Co-founder: Ronit Agrawal
+                        Co-Founder: Aditya Agrawal | Co-founder: Ronit Agrawal
                     </p>
                 </div>
 
