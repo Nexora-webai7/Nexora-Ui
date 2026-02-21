@@ -219,7 +219,7 @@ export function RotatingEarth({ width = 800, height = 600, className = "" }: Rot
     }
 
     // Set up rotation and interaction
-    const rotation = [0, 0]
+    const rotation: [number, number, number] = [0, 0, 0]
     let autoRotate = true
     const rotationSpeed = 0.5
 
