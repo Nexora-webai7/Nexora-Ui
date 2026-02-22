@@ -66,60 +66,60 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-24 px-6 flex justify-center items-center"
+      className="py-20 md:py-24 px-4 sm:px-6 flex justify-center items-center overflow-hidden"
     >
-      <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-16 items-start">
-        
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
         {/* LEFT SIDE */}
-        <div className="space-y-8">
+        <div className="space-y-8 px-2 sm:px-0">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6 text-center lg:text-left">
               Initiate
               <span className="px-2 text-gradient">Project.</span>
             </h2>
 
-            <p className="text-zinc-400 max-w-md">
+            <p className="text-zinc-400 max-w-md mx-auto lg:mx-0 text-center lg:text-left text-sm sm:text-base">
               Discuss your business objectives with an expert architect. We
               provide detailed technical roadmaps and quotes tailored to your
               goals.
             </p>
           </div>
 
-          <div className="space-y-8 text-zinc-300">
+          <div className="space-y-6 sm:space-y-8 text-zinc-300">
 
             {/* Email */}
-            <div>
-              <h4 className="text-xs uppercase tracking-widest text-zinc-500 mb-3">
+            <div className="flex flex-col items-center lg:items-start">
+              <h4 className="text-[10px] uppercase tracking-widest text-zinc-500 mb-3">
                 Electronic Mail
               </h4>
 
               <div className="space-y-3">
 
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+                <div className="flex items-center gap-4 text-sm sm:text-base">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center flex-shrink-0">
                     <Mail size={18} className="text-purple-500" />
                   </div>
-                  <span>nexora.webai7@gmail.com</span>
+                  <span className="break-all">nexora.webai7@gmail.com</span>
                 </div>
               </div>
             </div>
 
             {/* Phone */}
-            <div>
-              <h4 className="text-xs uppercase tracking-widest text-zinc-500 mb-3">
+            <div className="flex flex-col items-center lg:items-start">
+              <h4 className="text-[10px] uppercase tracking-widest text-zinc-500 mb-3">
                 Phone Link
               </h4>
 
-              <div className="space-y-3">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+              <div className="space-y-3 w-full max-w-xs sm:max-w-none">
+                <div className="flex items-center justify-center lg:justify-start gap-4 text-sm sm:text-base">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center flex-shrink-0">
                     <Smartphone size={18} className="text-blue-500" />
                   </div>
                   <span>+91 63966 24377</span>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
+                <div className="flex items-center justify-center lg:justify-start gap-4 text-sm sm:text-base">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center flex-shrink-0">
                     <Smartphone size={18} className="text-purple-500" />
                   </div>
                   <span>+91 63958 58698</span>
@@ -128,25 +128,25 @@ export const Contact = () => {
             </div>
 
             {/* Address */}
-            <div>
-              <h4 className="text-xs uppercase tracking-widest text-zinc-500 mb-3">
+            <div className="flex flex-col items-center lg:items-start">
+              <h4 className="text-[10px] uppercase tracking-widest text-zinc-500 mb-3">
                 Headquarters
               </h4>
 
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center mt-1">
+              <div className="flex items-start justify-center lg:justify-start gap-4 text-sm sm:text-base">
+                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center mt-1 flex-shrink-0">
                   <MapPin size={18} className="text-pink-500" />
                 </div>
-                <div>
+                <div className="text-center lg:text-left">
                   <p>Bennett University, India</p>
-                  <p className="text-zinc-400 text-sm">
+                  <p className="text-zinc-400 text-xs sm:text-sm">
                     201301, Greater Noida
                   </p>
                 </div>
               </div>
             </div>
 
-            <p className="text-sm text-zinc-500 pt-4 border-t border-white/10">
+            <p className="text-xs sm:text-sm text-center lg:text-left text-zinc-500 pt-4 border-t border-white/10 px-4 sm:px-0">
               Most project inquiries receive a response within 24 business hours
               from an engineer.
             </p>
@@ -154,7 +154,7 @@ export const Contact = () => {
         </div>
 
         {/* RIGHT SIDE - FORM */}
-        <div className="glass p-8 md:p-12 rounded-[32px] border border-white/10 relative overflow-hidden">
+        <div className="glass p-6 sm:p-8 md:p-12 rounded-[2rem] md:rounded-[32px] border border-white/10 relative overflow-hidden mx-auto w-full max-w-xl lg:max-w-none">
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-600/20 blur-[100px] pointer-events-none" />
 
           <div className="relative z-10">
@@ -163,14 +163,14 @@ export const Contact = () => {
                 <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Send size={24} className="text-green-500" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
-                <p className="text-zinc-400">Thank you for your inquiry. We&apos;ll respond within 24 business hours.</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Message Sent!</h3>
+                <p className="text-zinc-400 text-sm sm:text-base">Thank you for your inquiry. We&apos;ll respond within 24 business hours.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest pl-1">
+                    <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest pl-1">
                       Full Name
                     </label>
                     <input
@@ -179,13 +179,13 @@ export const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                      className="w-full px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-colors text-sm sm:text-base"
                       placeholder="Your Name"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest pl-1">
+                    <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest pl-1">
                       Organization
                     </label>
                     <input
@@ -193,14 +193,14 @@ export const Contact = () => {
                       name="organization"
                       value={formData.organization}
                       onChange={handleInputChange}
-                      className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                      className="w-full px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-colors text-sm sm:text-base"
                       placeholder="Company Name"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest pl-1">
+                  <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest pl-1">
                     Email Address
                   </label>
                   <input
@@ -209,13 +209,13 @@ export const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-colors text-sm sm:text-base"
                     placeholder="name@company.com"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest pl-1">
+                  <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest pl-1">
                     Primary Need
                   </label>
                   <input
@@ -223,13 +223,13 @@ export const Contact = () => {
                     name="need"
                     value={formData.need}
                     onChange={handleInputChange}
-                    className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-colors text-sm sm:text-base"
                     placeholder="Web / Mobile / AI / SaaS"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest pl-1">
+                  <label className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest pl-1">
                     Project Brief
                   </label>
                   <textarea
@@ -238,21 +238,21 @@ export const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows={4}
-                    className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none text-sm sm:text-base"
                     placeholder="Outline your requirements..."
                   />
                 </div>
 
                 {submitStatus === 'error' && (
-                  <div className="p-4 rounded-2xl bg-red-500/10 border border-red-500/20">
-                    <p className="text-red-400 text-sm">{errorMessage}</p>
+                  <div className="p-4 rounded-xl sm:rounded-2xl bg-red-500/10 border border-red-500/20">
+                    <p className="text-red-400 text-xs sm:text-sm">{errorMessage}</p>
                   </div>
                 )}
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-5 rounded-2xl bg-white text-black font-bold text-lg hover:bg-zinc-200 transition-colors flex items-center justify-center group overflow-hidden relative disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full py-4 sm:py-5 rounded-xl sm:rounded-2xl bg-white text-black font-bold text-base sm:text-lg hover:bg-zinc-200 transition-colors flex items-center justify-center group overflow-hidden relative disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>

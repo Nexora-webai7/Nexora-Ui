@@ -38,7 +38,9 @@ const Navbar = () => {
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center space-x-2 group">
-                    <Image src="/logo.png" alt="Nexora" width={182} height={182} />
+                    <div className="relative w-32 h-32 md:w-[182px] md:h-[182px]">
+                        <Image src="/logo.png" alt="Nexora" fill className="object-contain" priority />
+                    </div>
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -62,7 +64,7 @@ const Navbar = () => {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden text-white p-2"
+                    className="md:hidden text-white p-2 z-50"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,17 +75,17 @@ const Navbar = () => {
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 right-0 bg-zinc-950 border-b border-white/10 md:hidden overflow-hidden"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="absolute top-0 left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-white/10 md:hidden overflow-hidden pt-24"
                     >
-                        <div className="flex flex-col p-6 space-y-4">
+                        <div className="flex flex-col p-8 space-y-6">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-lg font-medium text-zinc-400"
+                                    className="text-2xl font-outfit font-bold text-white/90 hover:text-white transition-colors border-b border-white/5 pb-4"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {link.name}
@@ -91,7 +93,7 @@ const Navbar = () => {
                             ))}
                             <Link
                                 href="#contact"
-                                className="w-full py-3 rounded-lg bg-white text-black text-center font-bold"
+                                className="w-full py-4 rounded-2xl bg-white text-black text-center font-bold text-lg"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 Get Started

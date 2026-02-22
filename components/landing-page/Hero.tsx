@@ -25,19 +25,19 @@ export const Hero = () => {
                         <Sparkles size={14} className="mr-2 text-blue-400" />
                         Engineering the Digital Frontier
                     </span>
-                    <h1 className="text-5xl md:text-6xl font-outfit font-bold tracking-tight text-white mb-8 leading-[1.1]">
-                        Build Your <span className="text-gradient">Futuristic</span> <br /> Digital Presence
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-outfit font-bold tracking-tight text-white mb-8 leading-[1.1]">
+                        Build Your <span className="text-gradient">Futuristic</span> <br className="hidden sm:block" /> Digital Presence
                     </h1>
-                    <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
+                    <p className="text-zinc-400 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 md:mb-12 leading-relaxed px-4">
                         Nexora is a premium Web & App development agency crafting bespoke digital experiences
                         with cutting-edge technology and visionary design.
                     </p>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <Link href="#contact" className="px-8 py-4 rounded-full bg-white text-black font-bold hover:scale-105 transition-transform flex items-center group">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
+                        <Link href="#contact" className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-bold hover:scale-105 transition-transform flex items-center justify-center group">
                             Start Your Project
                             <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                        <Link href="#services" className="px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-bold hover:bg-white/10 transition-colors">
+                        <Link href="#services" className="w-full sm:w-auto px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-bold hover:bg-white/10 transition-colors text-center">
                             View Showcase
                         </Link>
                     </div>
@@ -49,9 +49,11 @@ export const Hero = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4, duration: 1 }}
-                className="mt-20 px-6 mx-auto"
+                className="hidden md:block mt-12 md:mt-20 px-6 mx-auto w-full max-w-4xl"
             >
-                <RotatingEarth />
+                <div className="relative aspect-square sm:aspect-video md:aspect-auto">
+                    <RotatingEarth />
+                </div>
             </motion.div>
         </section>
     );

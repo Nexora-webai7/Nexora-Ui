@@ -14,11 +14,11 @@ export const Process = () => {
     ];
 
     return (
-        <section id="process" className="py-24 px-6 bg-black">
+        <section id="process" className="py-20 md:py-24 px-4 sm:px-6 bg-black">
             <div className="max-w-7xl mx-auto">
                 <SectionHeader title="Our Process" subtitle="How we turn ideas into industry-leading digital products." />
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 relative">
                     <div className="hidden md:block absolute top-[50px] left-0 right-0 h-px bg-white/10 -z-10" />
                     {steps.map((step, index) => (
                         <motion.div
@@ -33,7 +33,12 @@ export const Process = () => {
                                 {index + 1}
                             </div>
                             <h3 className="text-xl font-outfit font-bold text-white mb-2">{step.title}</h3>
-                            <p className="text-zinc-500 text-sm leading-relaxed">{step.desc}</p>
+                            <p className="text-zinc-500 text-sm leading-relaxed px-4 sm:px-0">{step.desc}</p>
+
+                            {/* Mobile connector line */}
+                            {index < steps.length - 1 && (
+                                <div className="block md:hidden w-px h-8 bg-white/10 mx-auto mt-4 mb-2" />
+                            )}
                         </motion.div>
                     ))}
                 </div>
