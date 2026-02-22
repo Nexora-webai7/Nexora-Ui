@@ -9,52 +9,56 @@ import { RotatingEarth } from "@/components/wireframe-dotted-globe";
 
 export const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center pt-24 md:pt-20 overflow-hidden">
             <div className="fixed inset-0 pointer-events-none">
                 <DottedSurface className="size-full" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 text-center">
+            <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                    <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-400 text-sm font-medium mb-8">
-                        <Sparkles size={14} className="mr-2 text-blue-400" />
-                        Engineering the Digital Frontier
-                    </span>
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-outfit font-bold tracking-tight text-white mb-8 leading-[1.1]">
-                        Build Your <span className="text-gradient">Futuristic</span> <br className="hidden sm:block" /> Digital Presence
-                    </h1>
-                    <p className="text-zinc-400 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 md:mb-12 leading-relaxed px-4">
-                        Nexora is a premium Web & App development agency crafting bespoke digital experiences
-                        with cutting-edge technology and visionary design.
-                    </p>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
-                        <Link href="#contact" className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-bold hover:scale-105 transition-transform flex items-center justify-center group">
-                            Start Your Project
-                            <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                        <Link href="#services" className="w-full sm:w-auto px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-bold hover:bg-white/10 transition-colors text-center">
-                            View Showcase
-                        </Link>
-                    </div>
-                </motion.div>
-            </div>
+                    {/* Text Content */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="text-center lg:text-left"
+                    >
+                        <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-400 text-sm font-medium mb-8">
+                            <Sparkles size={14} className="mr-2 text-blue-400" />
+                            Engineering the Digital Frontier
+                        </span>
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-outfit font-bold tracking-tight text-white mb-8 leading-[1.1] md:max-w-2xl mx-auto lg:mx-0">
+                            Build Your <span className="text-gradient">Futuristic</span> <br className="hidden sm:block" /> Digital Presence
+                        </h1>
+                        <p className="text-zinc-400 text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-10 md:mb-12 leading-relaxed">
+                            Nexora is a premium Web & App development agency crafting bespoke digital experiences
+                            with cutting-edge technology and visionary design.
+                        </p>
+                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                            <Link href="#contact" className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-bold hover:scale-105 transition-transform flex items-center justify-center group">
+                                Start Your Project
+                                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                            <Link href="#services" className="w-full sm:w-auto px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white font-bold hover:bg-white/10 transition-colors text-center">
+                                View Showcase
+                            </Link>
+                        </div>
+                    </motion.div>
 
-            {/* Hero Image / Abstract Pattern */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.4, duration: 1 }}
-                className="hidden md:block mt-12 md:mt-20 px-6 mx-auto w-full max-w-4xl"
-            >
-                <div className="relative aspect-square sm:aspect-video md:aspect-auto">
-                    <RotatingEarth />
+                    {/* Globe / Abstract Pattern - Hidden on mobile, 50% on desktop */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9, x: 30 }}
+                        animate={{ opacity: 1, scale: 1, x: 0 }}
+                        transition={{ delay: 0.2, duration: 1 }}
+                        className="hidden lg:flex justify-center items-center w-full"
+                    >
+                        <div className="relative w-full aspect-square max-w-[500px] xl:max-w-[600px]">
+                            <RotatingEarth />
+                        </div>
+                    </motion.div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 };
