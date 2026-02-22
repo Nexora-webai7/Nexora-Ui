@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { SectionHeader } from "./SectionHeader";
 
@@ -21,12 +20,8 @@ export const Process = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 relative">
                     <div className="hidden md:block absolute top-[50px] left-0 right-0 h-px bg-white/10 -z-10" />
                     {steps.map((step, index) => (
-                        <motion.div
+                        <div
                             key={step.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
                             className="relative text-center group"
                         >
                             <div className="w-12 h-12 rounded-full glass border-white/20 mx-auto flex items-center justify-center text-white font-bold mb-6 bg-black z-10 transition-colors group-hover:bg-white group-hover:text-black">
@@ -39,7 +34,7 @@ export const Process = () => {
                             {index < steps.length - 1 && (
                                 <div className="block md:hidden w-px h-8 bg-white/10 mx-auto mt-4 mb-2" />
                             )}
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

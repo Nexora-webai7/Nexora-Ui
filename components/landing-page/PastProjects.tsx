@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight, Code2, Sparkles, Rocket, Globe, Coffee, Building2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeader } from "./SectionHeader";
@@ -61,12 +60,8 @@ export const PastProjects = () => {
                     {projects.map((project, index) => {
                         const isLarge = project.size.includes("row-span-2");
                         return (
-                            <motion.div
+                            <div
                                 key={project.title}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
                                 className={cn(
                                     "group relative rounded-[2.5rem] overflow-hidden border border-white/5 bg-zinc-900/40 backdrop-blur-sm flex flex-col justify-between transition-all duration-500 hover:border-white/20 hover:shadow-2xl hover:shadow-white/5",
                                     isLarge ? "p-8" : "p-5",
@@ -83,7 +78,7 @@ export const PastProjects = () => {
                                 <div>
                                     <div className={cn("flex justify-between items-start", isLarge ? "mb-6" : "mb-3")}>
                                         <div className={cn(
-                                            "rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 group-hover:scale-110 transition-transform duration-500",
+                                            "rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 transition-transform duration-500",
                                             isLarge ? "p-3" : "p-2.5",
                                             project.accent
                                         )}>
@@ -100,7 +95,7 @@ export const PastProjects = () => {
                                     <span className={cn("text-xs font-bold uppercase tracking-widest block", isLarge ? "mb-2" : "mb-1.5", project.accent)}>
                                         {project.category}
                                     </span>
-                                    <h3 className={cn("font-outfit font-bold text-white group-hover:translate-x-1 transition-transform duration-300", isLarge ? "text-2xl md:text-3xl mb-3" : "text-xl md:text-2xl mb-2")}>
+                                    <h3 className={cn("font-outfit font-bold text-white transition-transform duration-300", isLarge ? "text-2xl md:text-3xl mb-3" : "text-xl md:text-2xl mb-2")}>
                                         {project.title}
                                     </h3>
                                     <p className={cn("text-zinc-400 leading-relaxed", isLarge ? "text-sm md:text-base max-w-[280px]" : "text-[13px] md:text-sm")}>
@@ -110,16 +105,15 @@ export const PastProjects = () => {
 
                                 {/* Content Bottom */}
                                 <div className={cn("flex items-center justify-between", isLarge ? "mt-8" : "mt-auto pt-4")}>
-                                    <motion.a
+                                    <a
                                         href={project.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        whileHover={{ x: 5 }}
                                         className="flex items-center text-white font-medium group/btn cursor-pointer"
                                     >
                                         View Project
                                         <ArrowRight className="ml-2 w-4 h-4 text-white/50 group-hover/btn:text-white transition-colors" />
-                                    </motion.a>
+                                    </a>
                                     <a
                                         href={project.link}
                                         target="_blank"
@@ -129,7 +123,7 @@ export const PastProjects = () => {
                                         <ExternalLink className="w-4 h-4 text-white/50" />
                                     </a>
                                 </div>
-                            </motion.div>
+                            </div>
                         );
                     })}
                 </div>

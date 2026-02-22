@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeader } from "./SectionHeader";
@@ -21,16 +20,13 @@ export const Portfolio = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
-                        <motion.div
+                        <div
                             key={project.title}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
                             className="group relative rounded-3xl overflow-hidden aspect-[4/3] bg-zinc-950 border border-white/5"
                         >
                             <div className={cn("absolute inset-0 bg-gradient-to-br transition-opacity duration-500 opacity-40 group-hover:opacity-60", project.color)} />
                             <div className="absolute inset-0 p-10 flex flex-col justify-end">
-                                <span className="text-blue-400 text-sm font-medium mb-2 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                <span className="text-blue-400 text-sm font-medium mb-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
                                     {project.category}
                                 </span>
                                 <h3 className="text-3xl font-outfit font-bold text-white mb-4">{project.title}</h3>
@@ -38,7 +34,7 @@ export const Portfolio = () => {
                                     View Case Study <ExternalLink size={16} className="ml-2" />
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

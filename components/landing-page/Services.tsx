@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { Code, Smartphone, Layers, Monitor, Instagram } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeader } from "./SectionHeader";
@@ -46,16 +45,8 @@ export const Services = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                     {services.map((service, index) => (
-                        <motion.div
+                        <div
                             key={service.title}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{
-                                duration: 0.8,
-                                delay: index * 0.15,
-                                ease: [0.21, 0.47, 0.32, 0.98]
-                            }}
                             className={cn(
                                 "glass p-6 md:p-8 rounded-[2rem] md:rounded-3xl group hover:border-white/30 hover:bg-white/10 transition-all cursor-default relative overflow-hidden",
                                 service.className
@@ -75,7 +66,7 @@ export const Services = () => {
                                 <h3 className="text-xl md:text-2xl font-outfit font-bold text-white mb-4">{service.title}</h3>
                                 <p className="text-zinc-500 text-sm md:text-base leading-relaxed">{service.description}</p>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

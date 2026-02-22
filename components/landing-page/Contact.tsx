@@ -145,11 +145,6 @@ export const Contact = () => {
                 </div>
               </div>
             </div>
-
-            <p className="text-xs sm:text-sm text-center lg:text-left text-zinc-500 pt-4 border-t border-white/10 px-4 sm:px-0">
-              Most project inquiries receive a response within 24 business hours
-              from an engineer.
-            </p>
           </div>
         </div>
 

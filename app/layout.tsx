@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "@/components/SmoothScroll";
-import CustomCursor from "@/components/CustomCursor";
 import BackgroundGrid from "@/components/BackgroundGrid";
 
 const inter = Inter({
@@ -30,13 +28,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} antialiased selection:bg-blue-500/30 selection:text-white`}
       >
-        <SmoothScroll>
-          <CustomCursor />
-          <BackgroundGrid />
-          <div className="relative z-10">
-            {children}
-          </div>
-        </SmoothScroll>
+        <BackgroundGrid />
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );

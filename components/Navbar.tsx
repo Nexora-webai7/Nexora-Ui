@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -72,36 +71,31 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Menu Dropdown */}
-            <AnimatePresence>
-                {isMobileMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="absolute top-0 left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-white/10 md:hidden overflow-hidden pt-24"
-                    >
-                        <div className="flex flex-col p-8 space-y-6">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className="text-2xl font-outfit font-bold text-white/90 hover:text-white transition-colors border-b border-white/5 pb-4"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
+            {isMobileMenuOpen && (
+                <div
+                    className="absolute top-0 left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-white/10 md:hidden overflow-hidden pt-24"
+                >
+                    <div className="flex flex-col p-8 space-y-6">
+                        {navLinks.map((link) => (
                             <Link
-                                href="#contact"
-                                className="w-full py-4 rounded-2xl bg-white text-black text-center font-bold text-lg"
+                                key={link.name}
+                                href={link.href}
+                                className="text-2xl font-outfit font-bold text-white/90 hover:text-white transition-colors border-b border-white/5 pb-4"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
-                                Get Started
+                                {link.name}
                             </Link>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                        ))}
+                        <Link
+                            href="#contact"
+                            className="w-full py-4 rounded-2xl bg-white text-black text-center font-bold text-lg"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Get Started
+                        </Link>
+                    </div>
+                </div>
+            )}
         </nav>
     );
 };

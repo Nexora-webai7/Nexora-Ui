@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { Check, Globe, Settings, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeader } from "./SectionHeader";
@@ -69,16 +68,8 @@ export const Pricing = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     {plans.map((plan, index) => (
-                        <motion.div
+                        <div
                             key={plan.title}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{
-                                duration: 0.8,
-                                delay: index * 0.1,
-                                ease: [0.21, 0.47, 0.32, 0.98]
-                            }}
                             className={cn(
                                 "glass p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] relative flex flex-col h-full transition-all group",
                                 plan.highlight ? "border-white/30 bg-white/5 ring-1 ring-white/20" : "border-white/10"
@@ -120,7 +111,7 @@ export const Pricing = () => {
                             )}>
                                 {plan.buttonText}
                             </button>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>
